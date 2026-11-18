@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafli Nugroho — Luxury Editorial Portfolio &amp; Curriculum Vitae</title>
+
+    <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        alabaster: {
+                            DEFAULT: '#F7F6F1',
+                            card: '#FCFBF8',
+                            muted: '#ECE9E0',
+                        },
+                        emeraldDeep: {
+                            DEFAULT: '#091913',
+                            surface: '#112B21',
+                            elevated: '#17382B',
+                            sage: '#4F7363',
+                            mist: '#88A699',
+                        },
+                        champagne: {
+                            DEFAULT: '#C5A059',
+                            bright: '#E4C47C',
+                            soft: '#F5ECDA',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C26546',
+                            bright: '#DC7F60',
+                            soft: '#F8E7E1',
+                        }
+                    },
+                    boxShadow: {
+                        'luxury-light': '0 24px 60px -15px rgba(9, 25, 19, 0.09)',
+                        'luxury-dark': '0 28px 70px -15px rgba(0, 0, 0, 0.65)',
+                        'gold-glow': '0 16px 40px -10px rgba(197, 160, 89, 0.32)',
+                        'emerald-glow': '0 16px 40px -10px rgba(79, 115, 99, 0.35)',
+                        'terracotta-glow': '0 16px 40px -10px rgba(194, 101, 70, 0.32)',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Default to Obsidian Emerald Dark Mode unless user explicitly saved Light Mode -->
+    <script>
+        (function () {
+            try {
+                const savedTheme = localStorage.getItem('rafli_editorial_theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                } else {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <style>
+        /* Base Luxury Styling & 60fps Hardware Accelerated Animations */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Architectural Grid Texture */
+        .architectural-grid {
+            background-image:
+                linear-gradient(to right, rgba(197, 160, 89, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(197, 160, 89, 0.07) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+        .dark .architectural-grid {
+            background-image:
+                linear-gradient(to right, rgba(228, 196, 124, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(228, 196, 124, 0.05) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        /* Champagne Hairline Divider */
+        .gold-hairline {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.55), transparent);
+        }
+        .dark .gold-hairline {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(228, 196, 124, 0.4), transparent);
+        }
+
+        /* Ambient Floating Light Orbs */
+        @keyframes floatSlow {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(24px, -28px, 0) scale(1.06); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(-26px, 22px, 0) scale(0.95); }
+        }
+        .orb-float-1 { animation: floatSlow 14s ease-in-out infinite; }
+        .orb-float-2 { animation: floatReverse 18s ease-in-out infinite; }
+
+        /* Monogram Crest Slow Rotation */
+        @keyframes spinUltraSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .crest-ring-spin {
+            animation: spinUltraSlow 38s linear infinite;
+        }
+
+        /* Staggered Hero Entrance Choreography */
+        @keyframes heroRevealUp {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 26px, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .hero-stagger-1 { opacity: 0; animation: heroRevealUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards; }
+        .hero-stagger-2 { opacity: 0; animation: heroRevealUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards; }
+        .hero-stagger-3 { opacity: 0; animation: heroRevealUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.34s forwards; }
+        .hero-stagger-4 { opacity: 0; animation: heroRevealUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.48s forwards; }
+        .hero-stagger-5 { opacity: 0; animation: heroRevealUp 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards; }
+
+        /* Scroll Reveal Animation Class */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translate3d(0, 28px, 0);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* 3D Perspective Tilt & Specular Champagne Glare */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.35s ease,
+                        border-color 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .tilt-glare {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(228, 196, 124, 0.16), transparent 70%);
+            z-index: 20;
+        }
+        .tilt-card:hover .tilt-glare {
+            opacity: 1;
+        }
+
+        /* Skill Bar Smooth Fill */
+        .skill-fill {
+            width: 0%;
+            transition: width 1.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #091913; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-alabaster text-emeraldDeep dark:bg-emeraldDeep dark:text-[#F2F4F0] transition-colors duration-500 antialiased selection:bg-champagne selection:text-emeraldDeep architectural-grid">
+
+    <!-- Top Champagne-Gold Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 right-0 h-[3px] z-50 bg-transparent pointer-events-none">
+        <div id="scroll-progress" class="h-full w-0 bg-gradient-to-r from-champagne via-champagne-bright to-terracotta transition-[width] duration-75 ease-out shadow-[0_0_12px_rgba(228,196,124,0.8)]"></div>
+    </div>
+
+    <!-- Ambient Floating Light Orbs -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="orb-float-1 absolute -top-32 -left-24 w-[28rem] h-[28rem] rounded-full bg-champagne/15 dark:bg-champagne-bright/10 blur-[110px]"></div>
+        <div class="orb-float-2 absolute top-1/3 -right-28 w-[32rem] h-[32rem] rounded-full bg-emeraldDeep-sage/15 dark:bg-emeraldDeep-elevated/50 blur-[120px]"></div>
+        <div class="orb-float-1 absolute bottom-10 left-1/4 w-[24rem] h-[24rem] rounded-full bg-terracotta/10 dark:bg-terracotta-bright/10 blur-[110px]"></div>
+    </div>
+
+    <!-- Custom Toast Notification (No alert() used) -->
+    <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 translate-y-24 opacity-0 pointer-events-none transition-all duration-300 bg-emeraldDeep-surface dark:bg-emeraldDeep-elevated text-alabaster px-5 py-3.5 rounded-2xl shadow-2xl border border-champagne/50 flex items-center gap-3 text-xs sm:text-sm font-medium backdrop-blur-xl">
+        <span class="w-6 h-6 rounded-full bg-champagne/20 text-champagne-bright flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check text-xs"></i>
+        </span>
+        <span id="toast-message">Notifikasi</span>
+    </div>
+
+    <!-- =====================================================================
+         STICKY GLASSMORPHIC NAVIGATION BAR
+         ===================================================================== -->
+    <header class="sticky top-4 z-40 px-4 sm:px-6 pt-1">
+        <nav class="max-w-6xl mx-auto bg-alabaster-card/85 dark:bg-emeraldDeep-surface/80 backdrop-blur-xl border border-champagne/30 dark:border-champagne-bright/25 rounded-full px-4 sm:px-7 py-3 shadow-luxury-light dark:shadow-luxury-dark flex items-center justify-between gap-3 transition-colors duration-300">
+            <!-- Luxury Monogram Emblem (NO PERSONAL PHOTO) -->
+            <a href="#profil" class="flex items-center gap-3 group shrink-0">
+                <div class="w-10 h-10 rounded-full border border-champagne dark:border-champagne-bright bg-emeraldDeep/5 dark:bg-emeraldDeep flex items-center justify-center font-display font-bold text-base tracking-widest text-emeraldDeep dark:text-champagne-bright group-hover:bg-champagne group-hover:text-emeraldDeep dark:group-hover:bg-champagne-bright dark:group-hover:text-emeraldDeep transition-all duration-300 shadow-sm">
+                    RN
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-base sm:text-lg tracking-tight text-emeraldDeep dark:text-[#F2F4F0] leading-none">
+                        Rafli Nugroho
+                    </span>
+                    <span class="font-mono text-[9px] uppercase tracking-[0.22em] text-champagne dark:text-champagne-bright font-semibold mt-0.5 hidden sm:block">
+                        Executive Portfolio &amp; CV
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-[0.16em] text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                <a href="#profil" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors py-1">Profil</a>
+                <a href="#proyek" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors py-1">Proyek</a>
+                <a href="#galeri" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors py-1">Galeri</a>
+                <a href="#cv" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors py-1">CV &amp; Pengalaman</a>
+                <a href="#komentar" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors py-1">Komentar</a>
+            </div>
+
+            <!-- Right Controls: Theme Toggle & Direct WhatsApp CTA -->
+            <div class="flex items-center gap-2.5">
+                <!-- Light Mode ("Alabaster Luxury") / Dark Mode ("Obsidian Emerald") Switcher -->
+                <button id="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Ganti Tema Alabaster Luxury atau Obsidian Emerald" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-champagne/40 dark:border-champagne-bright/30 bg-alabaster-muted/80 dark:bg-emeraldDeep/90 text-emeraldDeep dark:text-champagne-bright hover:border-champagne dark:hover:border-champagne-bright transition-all duration-300 shadow-sm text-xs font-semibold">
+                    <i id="theme-icon" class="fa-solid fa-sun text-xs"></i>
+                    <span id="theme-label" class="hidden sm:inline font-mono text-[10px] uppercase tracking-wider">Obsidian</span>
+                </button>
+
+                <!-- Quick WhatsApp CTA -->
+                <a href="https://wa.me/6283151902491" target="_blank" rel="noopener noreferrer" class="bg-emeraldDeep hover:bg-emeraldDeep-surface dark:bg-champagne-bright dark:hover:bg-champagne text-alabaster dark:text-emeraldDeep px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-gold-glow flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm text-champagne-bright dark:text-emeraldDeep"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile Quick Navigation Bar -->
+        <div class="lg:hidden max-w-lg mx-auto mt-2.5 bg-alabaster-card/90 dark:bg-emeraldDeep-surface/90 backdrop-blur-md border border-champagne/25 dark:border-champagne-bright/20 rounded-full px-4 py-2 flex items-center justify-around text-[10px] font-semibold uppercase tracking-wider text-emeraldDeep-sage dark:text-emeraldDeep-mist shadow-sm">
+            <a href="#profil" class="hover:text-champagne dark:hover:text-champagne-bright py-0.5">Profil</a>
+            <a href="#proyek" class="hover:text-champagne dark:hover:text-champagne-bright py-0.5">Proyek</a>
+            <a href="#galeri" class="hover:text-champagne dark:hover:text-champagne-bright py-0.5">Galeri</a>
+            <a href="#cv" class="hover:text-champagne dark:hover:text-champagne-bright py-0.5">CV</a>
+            <a href="#komentar" class="hover:text-champagne dark:hover:text-champagne-bright py-0.5">Komentar</a>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         MAIN EDITORIAL CONTAINER
+         ===================================================================== -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24 space-y-24 sm:space-y-32">
+
+        <!-- =================================================================
+             SECTION 1: ASYMMETRIC LUXURY HERO (NO PERSONAL PROFILE PHOTO)
+             ================================================================= -->
+        <section id="profil" class="scroll-mt-28 space-y-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-9 items-stretch">
+
+                <!-- Left Main Editorial Manifesto (7 Cols) -->
+                <div class="lg:col-span-7 bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/30 dark:border-champagne-bright/25 rounded-[2rem] p-7 sm:p-11 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between relative overflow-hidden">
+                    <!-- Top Champagne Gold Bar Accent -->
+                    <div class="absolute top-0 left-0 w-44 h-[3px] bg-gradient-to-r from-champagne via-champagne-bright to-transparent"></div>
+
+                    <div class="space-y-6">
+                        <!-- Metadata Badges -->
+                        <div class="hero-stagger-1 flex flex-wrap items-center gap-2.5">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full font-mono text-[11px] font-medium bg-champagne-soft/80 dark:bg-champagne-bright/10 text-emeraldDeep dark:text-champagne-bright border border-champagne/35">
+                                <i class="fa-solid fa-location-dot text-champagne dark:text-champagne-bright"></i>
+                                Pamulang, Tangerang Selatan
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full font-mono text-[11px] font-medium bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-emeraldDeep/10 dark:border-white/10">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Available for Executive &amp; Digital Projects
+                            </span>
+                        </div>
+
+                        <!-- Editorial Display Headline -->
+                        <div class="hero-stagger-2 space-y-3">
+                            <p class="font-mono text-xs uppercase tracking-[0.26em] text-champagne dark:text-champagne-bright font-semibold">
+                                Rafli Nugroho &mdash; Dossier &amp; Portfolio
+                            </p>
+                            <h1 class="font-display text-3xl sm:text-5xl lg:text-[3.35rem] font-bold tracking-tight text-emeraldDeep dark:text-[#F2F4F0] leading-[1.12]">
+                                Menghadirkan Standar Kualitas, <span class="italic font-semibold text-champagne dark:text-champagne-bright">Ketelitian Operasional</span> &amp; Solusi Digital Berkelas.
+                            </h1>
+                        </div>
+
+                        <div class="gold-hairline w-full"></div>
+
+                        <!-- Refined Executive Summary -->
+                        <p class="hero-stagger-3 text-sm sm:text-[15px] text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed font-normal">
+                            Profesional muda dengan dedikasi tinggi terhadap keunggulan layanan pelanggan (<span class="italic">service excellence</span>), ketelitian verifikasi lapangan, dan efisiensi operasional. Menggabungkan pengalaman langsung di berbagai lini industri dengan perancangan situs web modern berstandar estetika tinggi untuk klien bisnis, teknik, hingga konstruksi.
+                        </p>
+                    </div>
+
+                    <!-- Direct Action CTA Buttons -->
+                    <div class="hero-stagger-4 pt-8 mt-8 border-t border-emeraldDeep/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="https://wa.me/6283151902491" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-bold text-alabaster dark:text-emeraldDeep bg-gradient-to-r from-emeraldDeep to-emeraldDeep-sage dark:from-champagne-bright dark:to-champagne hover:opacity-95 transition-all shadow-lg hover:shadow-gold-glow">
+                            <i class="fa-brands fa-whatsapp text-base text-champagne-bright dark:text-emeraldDeep"></i>
+                            <span>WhatsApp Langsung (083151902491)</span>
+                        </a>
+
+                        <a href="mailto:raflinugroho88@gmail.com" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl text-xs sm:text-sm font-semibold text-emeraldDeep dark:text-[#F2F4F0] bg-alabaster-muted/90 dark:bg-emeraldDeep hover:bg-champagne-soft/60 dark:hover:bg-emeraldDeep-elevated border border-champagne/35 dark:border-champagne-bright/25 transition-all">
+                            <i class="fa-solid fa-envelope text-champagne dark:text-champagne-bright"></i>
+                            <span>Kirim Email</span>
+                        </a>
+
+                        <button type="button" onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-emeraldDeep-mist hover:text-emeraldDeep dark:hover:text-champagne-bright border border-emeraldDeep/15 dark:border-white/15 hover:border-champagne/60 transition-all" title="Salin alamat email">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Salin Email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Editorial Monogram & Architectural Showcase Card (5 Cols - NO PERSONAL PHOTO) -->
+                <div class="hero-stagger-5 lg:col-span-5 tilt-card bg-gradient-to-br from-[#0E241C] via-[#091913] to-[#06110D] text-alabaster rounded-[2rem] p-7 sm:p-9 border border-champagne/40 dark:border-champagne-bright/30 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between">
+                    <div class="tilt-glare"></div>
+
+                    <!-- Top Architectural Preview Banner -->
+                    <div class="relative rounded-2xl overflow-hidden h-44 sm:h-48 border border-champagne/30 group">
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern Luxury Architecture Showcase"
+                            onerror="handleImgError(this, 'architecture')"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/40 to-transparent"></div>
+                        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-champagne-bright bg-[#091913]/80 backdrop-blur-md px-3 py-1 rounded-full border border-champagne/30">
+                                Curated Standards
+                            </span>
+                            <span class="font-mono text-[10px] text-alabaster/80">Tangerang Selatan</span>
+                        </div>
+                    </div>
+
+                    <!-- Center Luxury Monogram Crest -->
+                    <div class="flex flex-col items-center text-center my-6 space-y-4 relative z-10">
+                        <div class="relative w-24 h-24 flex items-center justify-center">
+                            <!-- Rotating Outer Gold Dashed Ring -->
+                            <div class="crest-ring-spin absolute inset-0 rounded-full border border-dashed border-champagne-bright/50"></div>
+                            <!-- Inner Solid Gold Disc -->
+                            <div class="w-20 h-20 rounded-full border border-champagne-bright/70 bg-emeraldDeep-surface/90 flex flex-col items-center justify-center shadow-gold-glow">
+                                <span class="font-display text-3xl font-bold tracking-widest text-champagne-bright">RN</span>
+                                <span class="font-mono text-[7px] uppercase tracking-[0.3em] text-alabaster/60">PORTFOLIO</span>
+                            </div>
+                        </div>
+
+                        <blockquote class="space-y-1.5 px-2">
+                            <p class="font-display italic text-xl sm:text-2xl text-champagne-bright leading-snug">
+                                &ldquo;Man jadda wajada.&rdquo;
+                            </p>
+                            <footer class="text-xs text-alabaster/75 font-light">
+                                Siapa yang bersungguh-sungguh dalam ketelitian dan pelayanan, dialah yang akan meraih kepercayaan.
+                            </footer>
+                        </blockquote>
+                    </div>
+
+                    <!-- Personal Credentials Strip (Clean Luxury Grid without photo) -->
+                    <div class="pt-4 border-t border-champagne/25 grid grid-cols-2 gap-3 text-xs relative z-10">
+                        <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06]">
+                            <span class="font-mono text-[9px] uppercase tracking-wider text-champagne-bright/80 block">Kelahiran</span>
+                            <span class="font-semibold text-alabaster mt-0.5 block">Tangerang, 12 Apr 2006</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06]">
+                            <span class="font-mono text-[9px] uppercase tracking-wider text-champagne-bright/80 block">Profil</span>
+                            <span class="font-semibold text-alabaster mt-0.5 block">20 Tahun &bull; Islam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Executive Metric Counters Strip -->
+            <div id="metrics-strip" class="reveal-on-scroll grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/90 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-5 sm:p-6 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldDeep-sage dark:text-emeraldDeep-mist">Digital Works</span>
+                        <i class="fa-solid fa-globe text-champagne dark:text-champagne-bright text-sm"></i>
+                    </div>
+                    <div class="font-display text-3xl sm:text-4xl font-bold text-emeraldDeep dark:text-champagne-bright">
+                        <span class="metric-counter" data-target="3" data-suffix="+">0</span>
+                    </div>
+                    <p class="text-xs font-medium text-emeraldDeep/75 dark:text-[#CBD6D1] mt-1">Platform Web Aktif</p>
+                </div>
+
+                <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/90 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-5 sm:p-6 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldDeep-sage dark:text-emeraldDeep-mist">Track Record</span>
+                        <i class="fa-solid fa-layer-group text-champagne dark:text-champagne-bright text-sm"></i>
+                    </div>
+                    <div class="font-display text-3xl sm:text-4xl font-bold text-emeraldDeep dark:text-champagne-bright">
+                        <span class="metric-counter" data-target="5" data-suffix="+">0</span>
+                    </div>
+                    <p class="text-xs font-medium text-emeraldDeep/75 dark:text-[#CBD6D1] mt-1">Bidang Operasional &amp; Kreatif</p>
+                </div>
+
+                <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/90 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-5 sm:p-6 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldDeep-sage dark:text-emeraldDeep-mist">Work Ethic</span>
+                        <i class="fa-solid fa-award text-champagne dark:text-champagne-bright text-sm"></i>
+                    </div>
+                    <div class="font-display text-3xl sm:text-4xl font-bold text-emeraldDeep dark:text-champagne-bright">
+                        <span class="metric-counter" data-target="100" data-suffix="%">0</span>
+                    </div>
+                    <p class="text-xs font-medium text-emeraldDeep/75 dark:text-[#CBD6D1] mt-1">Dedikasi &amp; Ketepatan</p>
+                </div>
+
+                <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/90 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-5 sm:p-6 shadow-luxury-light dark:shadow-luxury-dark flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldDeep-sage dark:text-emeraldDeep-mist">Client Care</span>
+                        <i class="fa-solid fa-headset text-champagne dark:text-champagne-bright text-sm"></i>
+                    </div>
+                    <div class="font-display text-3xl sm:text-4xl font-bold text-emeraldDeep dark:text-champagne-bright">
+                        24/7
+                    </div>
+                    <p class="text-xs font-medium text-emeraldDeep/75 dark:text-[#CBD6D1] mt-1">Responsivitas Klien</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             SECTION 2: FLAGSHIP DIGITAL PROJECTS & DUAL TESTIMONIALS
+             ================================================================= -->
+        <section id="proyek" class="scroll-mt-28 space-y-10 reveal-on-scroll">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-champagne/30 dark:border-champagne-bright/20 pb-6">
+                <div class="space-y-2">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-champagne dark:text-champagne-bright">
+                        01 / Flagship Digital Commissions
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                        Proyek Web Unggulan &amp; Testimoni Klien
+                    </h2>
+                </div>
+                <p class="text-xs sm:text-sm text-emeraldDeep-sage dark:text-emeraldDeep-mist max-w-md leading-relaxed">
+                    Tiga platform digital aktif yang dikembangkan untuk menghadirkan citra profesional kelas atas, dilengkapi catatan teknis pengembang dan ulasan langsung dari mitra klien.
+                </p>
+            </div>
+
+            <!-- 3 Flagship Project Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- PROJECT 1: Pembangunan Rumah Kontraktor -->
+                <article class="tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/35 dark:border-champagne-bright/25 rounded-[2rem] shadow-luxury-light hover:shadow-gold-glow dark:shadow-luxury-dark flex flex-col justify-between group">
+                    <div class="tilt-glare"></div>
+
+                    <div>
+                        <!-- Rich Architectural Banner Image -->
+                        <div class="relative h-52 overflow-hidden border-b border-champagne/25">
+                            <img
+                                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80"
+                                alt="Pembangunan Rumah Kontraktor"
+                                onerror="handleImgError(this, 'architecture')"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/35 to-transparent"></div>
+                            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full font-mono text-[10px] font-semibold uppercase tracking-wider bg-[#091913]/85 text-champagne-bright border border-champagne/40 backdrop-blur-md">
+                                    Architecture &amp; Build
+                                </span>
+                                <button type="button" onclick="openLightbox('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1400&q=85', 'Pembangunan Rumah Kontraktor', 'Platform jasa konstruksi residensial & arsitektur modern dengan standar kualitas tinggi.', 'https://pembangunanrumahkontraktor.vercel.app', 'architecture')" class="w-8 h-8 rounded-full bg-[#091913]/80 text-champagne-bright hover:bg-champagne-bright hover:text-emeraldDeep flex items-center justify-center transition-colors border border-champagne/30" title="Perbesar Pratinjau">
+                                    <i class="fa-solid fa-expand text-xs"></i>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-5 right-5 flex flex-wrap gap-1.5">
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">Luxury Residential</span>
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">Responsive UI</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7 space-y-4">
+                            <div class="space-y-1.5">
+                                <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                    Pembangunan Rumah Kontraktor
+                                </h3>
+                                <p class="text-xs sm:text-sm text-emeraldDeep/75 dark:text-[#CBD6D1] leading-relaxed">
+                                    Platform kontraktor pembangunan rumah dan arsitektur modern yang dirancang untuk memikat pemilik hunian menengah ke atas dengan tata letak kokoh dan berkelas.
+                                </p>
+                            </div>
+
+                            <!-- Dual Commentary: Developer Note & Client Testimonial -->
+                            <div class="space-y-3 pt-1">
+                                <div class="p-3.5 rounded-2xl bg-alabaster-muted/75 dark:bg-emeraldDeep/85 border border-emeraldDeep/10 dark:border-white/10 space-y-1">
+                                    <div class="flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-emeraldDeep-sage dark:text-champagne-bright">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                        <span>Catatan Developer (Rafli)</span>
+                                    </div>
+                                    <p class="text-xs text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed">
+                                        &ldquo;Membangun struktur informasi proyek konstruksi yang tegas, elegan, dan memudahkan calon pemilik rumah berkonsultasi langsung.&rdquo;
+                                    </p>
+                                </div>
+
+                                <div class="p-3.5 rounded-2xl bg-champagne-soft/45 dark:bg-champagne-bright/10 border border-champagne/30 space-y-1">
+                                    <div class="flex items-center justify-between text-[11px] font-bold text-champagne dark:text-champagne-bright">
+                                        <span><i class="fa-solid fa-quote-left mr-1.5"></i>Testimoni Klien</span>
+                                        <span class="text-[10px]">★★★★★</span>
+                                    </div>
+                                    <p class="text-xs italic text-emeraldDeep/85 dark:text-[#E2EAE6] leading-relaxed">
+                                        &ldquo;Tampilan webnya sangat berwibawa dan meyakinkan klien-klien kami yang mencari jasa bangun rumah berkualitas.&rdquo;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Footer -->
+                    <div class="px-6 sm:px-7 pb-6 pt-3">
+                        <a href="https://pembangunanrumahkontraktor.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-emeraldDeep hover:bg-emeraldDeep-elevated dark:bg-champagne-bright dark:hover:bg-champagne text-alabaster dark:text-emeraldDeep transition-all shadow-md">
+                            <span>Kunjungi Live Website</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2: Herodian Teknik -->
+                <article class="tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-emeraldDeep-sage/35 dark:border-emeraldDeep-sage/40 rounded-[2rem] shadow-luxury-light hover:shadow-emerald-glow dark:shadow-luxury-dark flex flex-col justify-between group">
+                    <div class="tilt-glare"></div>
+
+                    <div>
+                        <!-- Rich Engineering Banner Image -->
+                        <div class="relative h-52 overflow-hidden border-b border-emeraldDeep-sage/25">
+                            <img
+                                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
+                                alt="Herodian Teknik"
+                                onerror="handleImgError(this, 'engineering')"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/35 to-transparent"></div>
+                            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full font-mono text-[10px] font-semibold uppercase tracking-wider bg-[#091913]/85 text-emerald-300 border border-emerald-400/35 backdrop-blur-md">
+                                    Engineering &amp; Industrial
+                                </span>
+                                <button type="button" onclick="openLightbox('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=85', 'Herodian Teknik', 'Platform profil perusahaan rekayasa teknik, perawatan sistem, dan solusi industri profesional.', 'https://herodianteknik.vercel.app', 'engineering')" class="w-8 h-8 rounded-full bg-[#091913]/80 text-emerald-300 hover:bg-emerald-400 hover:text-emeraldDeep flex items-center justify-center transition-colors border border-emerald-400/30" title="Perbesar Pratinjau">
+                                    <i class="fa-solid fa-expand text-xs"></i>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-5 right-5 flex flex-wrap gap-1.5">
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">Corporate Trust</span>
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">Fast Dispatch</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7 space-y-4">
+                            <div class="space-y-1.5">
+                                <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                    Herodian Teknik
+                                </h3>
+                                <p class="text-xs sm:text-sm text-emeraldDeep/75 dark:text-[#CBD6D1] leading-relaxed">
+                                    Platform rekayasa teknik, pemeliharaan sistem, dan solusi teknis profesional dengan presentasi korporat berintegritas tinggi.
+                                </p>
+                            </div>
+
+                            <!-- Dual Commentary: Developer Note & Client Testimonial -->
+                            <div class="space-y-3 pt-1">
+                                <div class="p-3.5 rounded-2xl bg-alabaster-muted/75 dark:bg-emeraldDeep/85 border border-emeraldDeep/10 dark:border-white/10 space-y-1">
+                                    <div class="flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-emeraldDeep-sage dark:text-emerald-300">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                        <span>Catatan Developer (Rafli)</span>
+                                    </div>
+                                    <p class="text-xs text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed">
+                                        &ldquo;Mengutamakan presisi katalog layanan teknik serta jalur komunikasi cepat agar kebutuhan teknis klien segera tertangani.&rdquo;
+                                    </p>
+                                </div>
+
+                                <div class="p-3.5 rounded-2xl bg-emeraldDeep/5 dark:bg-emeraldDeep-elevated/70 border border-emeraldDeep-sage/30 space-y-1">
+                                    <div class="flex items-center justify-between text-[11px] font-bold text-emeraldDeep-sage dark:text-emerald-300">
+                                        <span><i class="fa-solid fa-quote-left mr-1.5"></i>Testimoni — Tim Herodian</span>
+                                        <span class="text-[10px] text-champagne-bright">★★★★★</span>
+                                    </div>
+                                    <p class="text-xs italic text-emeraldDeep/85 dark:text-[#E2EAE6] leading-relaxed">
+                                        &ldquo;Sangat rapi, modern, dan meningkatkan kepercayaan mitra bisnis terhadap layanan teknik kami.&rdquo;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Footer -->
+                    <div class="px-6 sm:px-7 pb-6 pt-3">
+                        <a href="https://herodianteknik.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-emeraldDeep-sage hover:bg-emeraldDeep dark:bg-emeraldDeep-sage dark:hover:bg-emerald-600 text-white transition-all shadow-md">
+                            <span>Kunjungi Live Website</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3: Mamah Ines Laundry -->
+                <article class="tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-terracotta/35 dark:border-terracotta-bright/30 rounded-[2rem] shadow-luxury-light hover:shadow-terracotta-glow dark:shadow-luxury-dark flex flex-col justify-between group">
+                    <div class="tilt-glare"></div>
+
+                    <div>
+                        <!-- Rich Boutique Hospitality & Laundry Banner Image -->
+                        <div class="relative h-52 overflow-hidden border-b border-terracotta/25">
+                            <img
+                                src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=900&q=80"
+                                alt="Mamah Ines Laundry"
+                                onerror="handleImgError(this, 'hospitality')"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/35 to-transparent"></div>
+                            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full font-mono text-[10px] font-semibold uppercase tracking-wider bg-[#091913]/85 text-terracotta-bright border border-terracotta/40 backdrop-blur-md">
+                                    Smart Service &amp; GPS
+                                </span>
+                                <button type="button" onclick="openLightbox('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1400&q=85', 'Mamah Ines Laundry Express', 'Aplikasi web layanan laundry antar-jemput ekspres dengan kalkulator harga otomatis dan integrasi lokasi GPS.', 'https://mamahineslaundry.vercel.app', 'hospitality')" class="w-8 h-8 rounded-full bg-[#091913]/80 text-terracotta-bright hover:bg-terracotta-bright hover:text-emeraldDeep flex items-center justify-center transition-colors border border-terracotta/35" title="Perbesar Pratinjau">
+                                    <i class="fa-solid fa-expand text-xs"></i>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-5 right-5 flex flex-wrap gap-1.5">
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">Auto Price Calc</span>
+                                <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-md bg-white/15 text-white backdrop-blur-md">GPS Pick-Up</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7 space-y-4">
+                            <div class="space-y-1.5">
+                                <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                    Mamah Ines Laundry
+                                </h3>
+                                <p class="text-xs sm:text-sm text-emeraldDeep/75 dark:text-[#CBD6D1] leading-relaxed">
+                                    Aplikasi web layanan laundry antar-jemput ekspres yang dilengkapi kalkulator estimasi harga otomatis dan integrasi lokasi GPS.
+                                </p>
+                            </div>
+
+                            <!-- Dual Commentary: Developer Note & Client Testimonial -->
+                            <div class="space-y-3 pt-1">
+                                <div class="p-3.5 rounded-2xl bg-alabaster-muted/75 dark:bg-emeraldDeep/85 border border-emeraldDeep/10 dark:border-white/10 space-y-1">
+                                    <div class="flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-terracotta dark:text-terracotta-bright">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                        <span>Catatan Developer (Rafli)</span>
+                                    </div>
+                                    <p class="text-xs text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed">
+                                        &ldquo;Mengotomatiskan perhitungan estimasi biaya dan titik penjemputan GPS agar pelanggan merasakan kenyamanan layanan premium.&rdquo;
+                                    </p>
+                                </div>
+
+                                <div class="p-3.5 rounded-2xl bg-terracotta-soft/45 dark:bg-terracotta-bright/10 border border-terracotta/30 space-y-1">
+                                    <div class="flex items-center justify-between text-[11px] font-bold text-terracotta dark:text-terracotta-bright">
+                                        <span><i class="fa-solid fa-quote-left mr-1.5"></i>Testimoni — Mamah Ines</span>
+                                        <span class="text-[10px] text-champagne-bright">★★★★★</span>
+                                    </div>
+                                    <p class="text-xs italic text-emeraldDeep/85 dark:text-[#E2EAE6] leading-relaxed">
+                                        &ldquo;Fitur kalkulator harga dan lokasi jemputnya sangat praktis, pelanggan jadi semakin senang memesan layanan kami!&rdquo;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Footer -->
+                    <div class="px-6 sm:px-7 pb-6 pt-3">
+                        <a href="https://mamahineslaundry.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-terracotta hover:bg-terracotta/90 dark:bg-terracotta-bright dark:hover:bg-terracotta text-white dark:text-emeraldDeep transition-all shadow-md">
+                            <span>Kunjungi Live Website</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- =================================================================
+             SECTION 3: VISUAL SHOWCASE & GALERI EKSKLUSIF (WITH LIGHTBOX)
+             ================================================================= -->
+        <section id="galeri" class="scroll-mt-28 space-y-10 reveal-on-scroll">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-champagne/30 dark:border-champagne-bright/20 pb-6">
+                <div class="space-y-2">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-champagne dark:text-champagne-bright">
+                        02 / Curated Visual Showcase
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                        Visual Showcase &amp; Galeri Eksklusif
+                    </h2>
+                </div>
+
+                <!-- Interactive Gallery Category Filter Pills -->
+                <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter Galeri Visual">
+                    <button type="button" onclick="filterGallery('all', this)" class="gal-filter-btn active px-4 py-2 rounded-full text-xs font-bold transition-all bg-emeraldDeep text-alabaster dark:bg-champagne-bright dark:text-emeraldDeep shadow-sm">
+                        Semua
+                    </button>
+                    <button type="button" onclick="filterGallery('arsitektur', this)" class="gal-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Arsitektur &amp; Kontraktor
+                    </button>
+                    <button type="button" onclick="filterGallery('teknik', this)" class="gal-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Rekayasa Teknik
+                    </button>
+                    <button type="button" onclick="filterGallery('hospitality', this)" class="gal-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Layanan Digital &amp; Hospitality
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6-Card High-Resolution Showcase Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Gallery Item 1 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="arsitektur" onclick="openLightbox('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85', 'Konsep Hunian Modern Minimalis', 'Inspirasi visual arsitektur residensial berkelas yang menjadi standar presentasi pada platform Pembangunan Rumah Kontraktor.', 'https://pembangunanrumahkontraktor.vercel.app', 'architecture')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Konsep Hunian Modern Minimalis" onerror="handleImgError(this, 'architecture')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-champagne-bright border border-champagne/40 backdrop-blur-md">
+                            Arsitektur &amp; Kontraktor
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Konsep Hunian Modern</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Estetika fasad &amp; struktur presisi</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-champagne-bright text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="arsitektur" onclick="openLightbox('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85', 'Perencanaan Cetak Biru & Struktur', 'Ketelitian perencanaan konstruksi demi menjamin kualitas bangunan jangka panjang bagi klien.', 'https://pembangunanrumahkontraktor.vercel.app', 'architecture')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Perencanaan Cetak Biru & Struktur" onerror="handleImgError(this, 'architecture')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-champagne-bright border border-champagne/40 backdrop-blur-md">
+                            Arsitektur &amp; Kontraktor
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Cetak Biru &amp; Struktur</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Akurasi spesifikasi pembangunan</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-champagne-bright text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="teknik" onclick="openLightbox('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85', 'Inspeksi & Rekayasa Presisi', 'Standar keandalan teknis dan pemeliharaan sistem untuk kebutuhan komersial maupun residensial.', 'https://herodianteknik.vercel.app', 'engineering')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80" alt="Inspeksi & Rekayasa Presisi" onerror="handleImgError(this, 'engineering')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-emerald-300 border border-emerald-400/40 backdrop-blur-md">
+                            Rekayasa Teknik
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Rekayasa Teknik Presisi</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Solusi teknis &amp; pemeliharaan sistem</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-emerald-400 text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="teknik" onclick="openLightbox('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1400&q=85', 'Sistem Mekanikal & Elektrikal', 'Dokumentasi standar kerja lapangan yang mengedepankan keselamatan, kebersihan, dan ketepatan waktu.', 'https://herodianteknik.vercel.app', 'engineering')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=80" alt="Sistem Mekanikal & Elektrikal" onerror="handleImgError(this, 'engineering')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-emerald-300 border border-emerald-400/40 backdrop-blur-md">
+                            Rekayasa Teknik
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Sistem Mekanikal &amp; Industri</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Efisiensi operasional &amp; keamanan</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-emerald-400 text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="hospitality" onclick="openLightbox('https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1400&q=85', 'Layanan Perawatan Tekstil Boutique', 'Standar higienitas dan kerapihan premium yang diadaptasi dalam platform digital Mamah Ines Laundry.', 'https://mamahineslaundry.vercel.app', 'hospitality')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=900&q=80" alt="Layanan Perawatan Tekstil Boutique" onerror="handleImgError(this, 'hospitality')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-terracotta-bright border border-terracotta/40 backdrop-blur-md">
+                            Layanan Digital &amp; Hospitality
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Perawatan Tekstil &amp; Express</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Integrasi antar-jemput berbasis GPS</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-terracotta-bright text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gal-item tilt-card group relative rounded-3xl overflow-hidden h-72 border border-champagne/30 dark:border-champagne-bright/20 shadow-luxury-light dark:shadow-luxury-dark cursor-pointer" data-gal-cat="hospitality" onclick="openLightbox('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85', 'Digital Experience & Customer Care', 'Mengutamakan kemudahan akses bagi konsumen dan kepuasan layanan di setiap interaksi digital maupun tatap muka.', 'https://wa.me/6283151902491', 'hospitality')">
+                    <div class="tilt-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80" alt="Digital Experience & Customer Care" onerror="handleImgError(this, 'hospitality')" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#091913] via-[#091913]/30 to-transparent opacity-90"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-[#091913]/80 text-terracotta-bright border border-terracotta/40 backdrop-blur-md">
+                            Layanan Digital &amp; Hospitality
+                        </span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">Service Excellence &amp; UX</h3>
+                            <p class="text-xs text-alabaster/75 mt-0.5">Kenyamanan transaksi &amp; komunikasi</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-terracotta-bright text-emeraldDeep flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =================================================================
+             SECTION 4: INTERACTIVE CURRICULUM VITAE (TIMELINE, EDUCATION & SKILLS)
+             ================================================================= -->
+        <section id="cv" class="scroll-mt-28 space-y-10 reveal-on-scroll">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-champagne/30 dark:border-champagne-bright/20 pb-6">
+                <div class="space-y-2">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-champagne dark:text-champagne-bright">
+                        03 / Curriculum Vitae &amp; Credentials
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                        Rekam Jejak Kerja, Pendidikan &amp; Kompetensi
+                    </h2>
+                </div>
+
+                <!-- Interactive CV Category Filter Pills -->
+                <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter Rekam Jejak CV">
+                    <button type="button" onclick="filterCV('all', this)" class="cv-filter-btn active px-4 py-2 rounded-full text-xs font-bold transition-all bg-emeraldDeep text-alabaster dark:bg-champagne-bright dark:text-emeraldDeep shadow-sm">
+                        Semua
+                    </button>
+                    <button type="button" onclick="filterCV('operasional', this)" class="cv-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Operasional &amp; Logistik
+                    </button>
+                    <button type="button" onclick="filterCV('layanan', this)" class="cv-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Layanan &amp; Produksi
+                    </button>
+                    <button type="button" onclick="filterCV('pendidikan', this)" class="cv-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-alabaster-card dark:bg-emeraldDeep-surface text-emeraldDeep-sage dark:text-emeraldDeep-mist border border-champagne/30 hover:border-champagne">
+                        Pendidikan
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2-Column Editorial CV Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- LEFT COLUMN (7 Cols): Timeline Experience & Education -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0] flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-xl bg-champagne/15 text-champagne dark:text-champagne-bright flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-timeline"></i>
+                            </span>
+                            Linimasa Karir &amp; Akademik
+                        </h3>
+                        <span id="cv-counter" class="font-mono text-xs text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                            8 Entri
+                        </span>
+                    </div>
+
+                    <div id="cv-timeline-list" class="space-y-4">
+
+                        <!-- CV Item 1: Mitra Driver Online & Logistik -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-6 shadow-sm" data-cv-cat="operasional">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-champagne-soft dark:bg-champagne-bright/15 text-champagne dark:text-champagne-bright mb-1.5">
+                                        Operasional &amp; Logistik
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        Mitra Driver Online &amp; Logistik
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-champagne-bright/90">
+                                        Grab, Shopee Driver, Green SM, InDrive
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-[#F2F4F0] border border-emeraldDeep/10 dark:border-white/10">
+                                    2026 &ndash; Sekarang
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed mt-3">
+                                Pelayanan penjemputan dan pengantaran penumpang serta logistik secara tepat waktu, ramah, dengan pemilihan rute efisien dan aman demi kepuasan pelanggan maksimal.
+                            </p>
+                        </div>
+
+                        <!-- CV Item 2: Calon Field Agent -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-6 shadow-sm" data-cv-cat="operasional">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-champagne-soft dark:bg-champagne-bright/15 text-champagne dark:text-champagne-bright mb-1.5">
+                                        Operasional &amp; Verifikasi
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        Calon Field Agent
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-champagne-bright/90">
+                                        PT Home Credit Indonesia
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-[#F2F4F0] border border-emeraldDeep/10 dark:border-white/10">
+                                    Agustus 2026
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed mt-3">
+                                Verifikasi data lapangan secara teliti serta menjalin komunikasi efektif, sopan, dan persuasif dengan calon nasabah.
+                            </p>
+                        </div>
+
+                        <!-- CV Item 3: F&B Crew -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-6 shadow-sm" data-cv-cat="layanan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-terracotta-soft dark:bg-terracotta-bright/15 text-terracotta dark:text-terracotta-bright mb-1.5">
+                                        Layanan &amp; Produksi
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        F&amp;B Crew
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-champagne-bright/90">
+                                        Wizzmie
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-[#F2F4F0] border border-emeraldDeep/10 dark:border-white/10">
+                                    Pengalaman Operasional F&amp;B
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed mt-3">
+                                Menangani pesanan konsumen dengan cekatan, memastikan penyajian higienis, serta menjaga standar kebersihan dan kerapihan outlet.
+                            </p>
+                        </div>
+
+                        <!-- CV Item 4: Freelance Digital Printing -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-6 shadow-sm" data-cv-cat="layanan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-terracotta-soft dark:bg-terracotta-bright/15 text-terracotta dark:text-terracotta-bright mb-1.5">
+                                        Layanan &amp; Produksi
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        Freelance Digital Printing
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-champagne-bright/90">
+                                        Cetakers x Twin Project
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-[#F2F4F0] border border-emeraldDeep/10 dark:border-white/10">
+                                    Pengalaman Cetak &amp; Produksi
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed mt-3">
+                                Mengoperasikan mesin cetak digital serta menyelesaikan proses finishing presisi sesuai spesifikasi dan standar kualitas pesanan klien.
+                            </p>
+                        </div>
+
+                        <!-- CV Item 5: Housekeeping Staff -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/25 dark:border-champagne-bright/20 rounded-2xl p-6 shadow-sm" data-cv-cat="layanan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-terracotta-soft dark:bg-terracotta-bright/15 text-terracotta dark:text-terracotta-bright mb-1.5">
+                                        Layanan &amp; Produksi
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        Housekeeping Staff
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-semibold text-emeraldDeep-sage dark:text-champagne-bright/90">
+                                        Layanan Kebersihan Area
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-[#F2F4F0] border border-emeraldDeep/10 dark:border-white/10">
+                                    Standar SOP
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-emeraldDeep/80 dark:text-[#CBD6D1] leading-relaxed mt-3">
+                                Memelihara kebersihan, kerapihan, dan kenyamanan lingkungan kerja secara konsisten sesuai standar operasional (SOP) yang berlaku.
+                            </p>
+                        </div>
+
+                        <!-- CV Item 6: SMK Puspita Bangsa -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-emeraldDeep-sage/30 rounded-2xl p-6 shadow-sm" data-cv-cat="pendidikan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep-elevated text-emeraldDeep-sage dark:text-emerald-300 mb-1.5">
+                                        Pendidikan
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        SMK Puspita Bangsa
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-medium text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                                        Sekolah Menengah Kejuruan
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-bold px-3 py-1 rounded-full bg-champagne-soft dark:bg-champagne-bright/15 text-champagne dark:text-champagne-bright border border-champagne/30">
+                                    Lulus 2024
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- CV Item 7: MTs Al-Ikhsan -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-emeraldDeep-sage/30 rounded-2xl p-6 shadow-sm" data-cv-cat="pendidikan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep-elevated text-emeraldDeep-sage dark:text-emerald-300 mb-1.5">
+                                        Pendidikan
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        MTs Al-Ikhsan
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-medium text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                                        Pendidikan Menengah Pertama
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                                    Selesai
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- CV Item 8: SDN Ciledug Barat -->
+                        <div class="cv-card tilt-card bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-emeraldDeep-sage/30 rounded-2xl p-6 shadow-sm" data-cv-cat="pendidikan">
+                            <div class="tilt-glare"></div>
+                            <div class="flex flex-wrap items-start justify-between gap-2">
+                                <div>
+                                    <span class="inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep-elevated text-emeraldDeep-sage dark:text-emerald-300 mb-1.5">
+                                        Pendidikan
+                                    </span>
+                                    <h4 class="font-display text-xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                                        SDN Ciledug Barat
+                                    </h4>
+                                    <p class="text-xs sm:text-sm font-medium text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                                        Pendidikan Dasar
+                                    </p>
+                                </div>
+                                <span class="font-mono text-[11px] font-semibold px-3 py-1 rounded-full bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                                    Selesai
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (5 Cols): Biodata & Animated Core Competencies -->
+                <div class="lg:col-span-5 space-y-6">
+
+                    <!-- Personal Dossier Card (No Photo) -->
+                    <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/30 dark:border-champagne-bright/25 rounded-3xl p-6 sm:p-7 shadow-luxury-light dark:shadow-luxury-dark space-y-4">
+                        <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0] flex items-center gap-2.5 border-b border-champagne/25 pb-3">
+                            <span class="w-8 h-8 rounded-xl bg-champagne/15 text-champagne dark:text-champagne-bright flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-address-card"></i>
+                            </span>
+                            Identitas &amp; Domisili
+                        </h3>
+
+                        <dl class="space-y-3 text-xs sm:text-sm">
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 pb-2.5 border-b border-emeraldDeep/5 dark:border-white/5">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">Nama Lengkap</dt>
+                                <dd class="font-bold text-emeraldDeep dark:text-[#F2F4F0]">Rafli Nugroho</dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 pb-2.5 border-b border-emeraldDeep/5 dark:border-white/5">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">Tempat, Tgl Lahir</dt>
+                                <dd class="font-semibold text-emeraldDeep dark:text-[#F2F4F0]">Tangerang, 12 April 2006</dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 pb-2.5 border-b border-emeraldDeep/5 dark:border-white/5">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">Usia / Agama</dt>
+                                <dd class="font-semibold text-emeraldDeep dark:text-[#F2F4F0]">20 Tahun / Islam</dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 pb-2.5 border-b border-emeraldDeep/5 dark:border-white/5">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">WhatsApp Direct</dt>
+                                <dd class="font-mono font-bold text-champagne dark:text-champagne-bright">
+                                    <a href="https://wa.me/6283151902491" target="_blank" rel="noopener noreferrer" class="hover:underline">083151902491</a>
+                                </dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 pb-2.5 border-b border-emeraldDeep/5 dark:border-white/5">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">Email Resmi</dt>
+                                <dd class="font-mono text-xs font-semibold text-emeraldDeep dark:text-[#F2F4F0] break-all">
+                                    <a href="mailto:raflinugroho88@gmail.com" class="hover:text-champagne dark:hover:text-champagne-bright">raflinugroho88@gmail.com</a>
+                                </dd>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <dt class="text-emeraldDeep-sage dark:text-emeraldDeep-mist font-medium">Domisili</dt>
+                                <dd class="font-medium text-emeraldDeep dark:text-[#DCE5E1] leading-relaxed">
+                                    Jl. H. Nurleman RT 02/RW 03, Benda Baru, Pamulang, Tangerang Selatan
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Animated Hard Skills & Soft Skills Card -->
+                    <div id="skills-panel" class="bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/30 dark:border-champagne-bright/25 rounded-3xl p-6 sm:p-7 shadow-luxury-light dark:shadow-luxury-dark space-y-6">
+                        <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0] flex items-center gap-2.5 border-b border-champagne/25 pb-3">
+                            <span class="w-8 h-8 rounded-xl bg-champagne/15 text-champagne dark:text-champagne-bright flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-sliders"></i>
+                            </span>
+                            Kompetensi &amp; Keahlian Utama
+                        </h3>
+
+                        <!-- Hard Skills with Animated Progress Bars -->
+                        <div class="space-y-4">
+                            <div class="font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-champagne dark:text-champagne-bright">
+                                Hard Skills &amp; Technical Mastery
+                            </div>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Customer Service Excellence</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">96%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-champagne to-champagne-bright" data-width="96%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Digital Web Presentation</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">92%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-champagne to-champagne-bright" data-width="92%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Navigasi Area Jabodetabek</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">95%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-emeraldDeep-sage to-emerald-400" data-width="95%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>F&amp;B Service &amp; Housekeeping SOP</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">94%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-emeraldDeep-sage to-emerald-400" data-width="94%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Digital Printing &amp; Finishing</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">90%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-terracotta to-terracotta-bright" data-width="90%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Ms. Office &amp; Word</span>
+                                        <span class="font-mono text-champagne dark:text-champagne-bright">88%</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full bg-emeraldDeep/10 dark:bg-emeraldDeep overflow-hidden">
+                                        <div class="skill-fill h-full rounded-full bg-gradient-to-r from-champagne to-champagne-bright" data-width="88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Soft Skills Pills -->
+                        <div class="space-y-3 pt-4 border-t border-emeraldDeep/10 dark:border-white/10">
+                            <div class="font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-champagne dark:text-champagne-bright">
+                                Soft Skills &amp; Executive Traits
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-champagne-soft/80 dark:bg-champagne-bright/15 text-emeraldDeep dark:text-champagne-bright border border-champagne/30">
+                                    Komunikasi Eksekutif &amp; Ramah
+                                </span>
+                                <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-emeraldDeep/10 dark:bg-emeraldDeep-elevated text-emeraldDeep-sage dark:text-emerald-300 border border-emeraldDeep-sage/30">
+                                    Ketelitian Verifikasi Lapangan
+                                </span>
+                                <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-terracotta-soft/80 dark:bg-terracotta-bright/15 text-terracotta dark:text-terracotta-bright border border-terracotta/30">
+                                    Disiplin Waktu &amp; Rute
+                                </span>
+                                <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-alabaster-muted dark:bg-emeraldDeep text-emeraldDeep dark:text-[#DCE5E1] border border-emeraldDeep/15 dark:border-white/15">
+                                    Adaptabilitas Tinggi
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             SECTION 5: RUANG KOMENTAR BEBAS (INTERACTIVE PUBLIC GUESTBOOK)
+             ================================================================= -->
+        <section id="komentar" class="scroll-mt-28 space-y-10 reveal-on-scroll">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-champagne/30 dark:border-champagne-bright/20 pb-6">
+                <div class="space-y-2">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-champagne dark:text-champagne-bright">
+                        04 / Open Guestbook &amp; Endorsements
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                        Ruang Komentar Bebas
+                    </h2>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span id="total-comments-badge" class="font-mono px-4 py-1.5 rounded-full text-xs font-bold bg-champagne-soft dark:bg-champagne-bright/15 text-emeraldDeep dark:text-champagne-bright border border-champagne/35">
+                        4 Komentar
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- Left: Public Comment Form (5 Cols) -->
+                <div class="lg:col-span-5 bg-alabaster-card dark:bg-emeraldDeep-surface/95 border border-champagne/35 dark:border-champagne-bright/25 rounded-3xl p-6 sm:p-8 shadow-luxury-light dark:shadow-luxury-dark space-y-5">
+                    <div class="space-y-1.5">
+                        <h3 class="font-display text-2xl font-bold text-emeraldDeep dark:text-[#F2F4F0]">
+                            Tulis Komentar atau Ulasan
+                        </h3>
+                        <p class="text-xs text-emeraldDeep-sage dark:text-emeraldDeep-mist leading-relaxed">
+                            Silakan sampaikan kesan, apresiasi proyek, maupun peluang kolaborasi profesional Anda secara langsung.
+                        </p>
+                    </div>
+
+                    <form id="guestbook-form" onsubmit="submitGuestbookComment(event)" class="space-y-4">
+                        <div>
+                            <label for="gb-name" class="block text-xs font-semibold text-emeraldDeep dark:text-[#DCE5E1] mb-1.5">
+                                Nama Lengkap <span class="text-terracotta">*</span>
+                            </label>
+                            <input type="text" id="gb-name" required maxlength="60" placeholder="Contoh: Ir. Budi Santoso" class="w-full rounded-xl px-4 py-2.5 text-xs sm:text-sm bg-alabaster dark:bg-emeraldDeep border border-emeraldDeep/15 dark:border-white/15 text-emeraldDeep dark:text-[#F2F4F0] placeholder-emeraldDeep-mist/60 focus:outline-none focus:border-champagne dark:focus:border-champagne-bright transition-colors">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label for="gb-role" class="block text-xs font-semibold text-emeraldDeep dark:text-[#DCE5E1] mb-1.5">
+                                    Jabatan / Instansi
+                                </label>
+                                <input type="text" id="gb-role" maxlength="50" placeholder="Contoh: Pemilik Proyek / HR" class="w-full rounded-xl px-4 py-2.5 text-xs sm:text-sm bg-alabaster dark:bg-emeraldDeep border border-emeraldDeep/15 dark:border-white/15 text-emeraldDeep dark:text-[#F2F4F0] placeholder-emeraldDeep-mist/60 focus:outline-none focus:border-champagne dark:focus:border-champagne-bright transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="gb-topic" class="block text-xs font-semibold text-emeraldDeep dark:text-[#DCE5E1] mb-1.5">
+                                    Kategori / Topik
+                                </label>
+                                <select id="gb-topic" class="w-full rounded-xl px-4 py-2.5 text-xs sm:text-sm bg-alabaster dark:bg-emeraldDeep border border-emeraldDeep/15 dark:border-white/15 text-emeraldDeep dark:text-[#F2F4F0] focus:outline-none focus:border-champagne dark:focus:border-champagne-bright transition-colors">
+                                    <option value="Testimoni Klien">Testimoni Klien</option>
+                                    <option value="Apresiasi Desain">Apresiasi Desain</option>
+                                    <option value="Peluang Karir">Peluang Karir</option>
+                                    <option value="Komentar Umum">Komentar Umum</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="gb-message" class="block text-xs font-semibold text-emeraldDeep dark:text-[#DCE5E1] mb-1.5">
+                                Pesan Komentar <span class="text-terracotta">*</span>
+                            </label>
+                            <textarea id="gb-message" rows="4" required maxlength="450" placeholder="Tuliskan ulasan, masukan, atau apresiasi Anda di sini..." class="w-full rounded-xl px-4 py-3 text-xs sm:text-sm bg-alabaster dark:bg-emeraldDeep border border-emeraldDeep/15 dark:border-white/15 text-emeraldDeep dark:text-[#F2F4F0] placeholder-emeraldDeep-mist/60 focus:outline-none focus:border-champagne dark:focus:border-champagne-bright transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 px-5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider bg-emeraldDeep hover:bg-emeraldDeep-elevated dark:bg-champagne-bright dark:hover:bg-champagne text-alabaster dark:text-emeraldDeep transition-all shadow-md hover:shadow-gold-glow flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-champagne-bright dark:text-emeraldDeep"></i>
+                            <span>Publikasikan Komentar</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Live Comments Feed with Endorse/Like Buttons (7 Cols) -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div id="guestbook-feed" class="space-y-4">
+                        <!-- Dynamically rendered comments -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================================
+         LUXURY EDITORIAL FOOTER
+         ===================================================================== -->
+    <footer class="border-t border-champagne/30 dark:border-champagne-bright/20 bg-alabaster-card/90 dark:bg-emeraldDeep-surface/95 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Left Monogram Brand -->
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-full border border-champagne dark:border-champagne-bright flex items-center justify-center font-display font-bold text-base text-emeraldDeep dark:text-champagne-bright">
+                        RN
+                    </div>
+                    <div>
+                        <div class="font-display font-bold text-lg text-emeraldDeep dark:text-[#F2F4F0]">Rafli Nugroho</div>
+                        <div class="font-mono text-[11px] text-emeraldDeep-sage dark:text-emeraldDeep-mist">Pamulang, Tangerang Selatan</div>
+                    </div>
+                </div>
+
+                <!-- Quick Direct Contact Links -->
+                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs font-semibold text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                    <a href="https://wa.me/6283151902491" target="_blank" rel="noopener noreferrer" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors flex items-center gap-1.5">
+                        <i class="fa-brands fa-whatsapp text-sm text-champagne dark:text-champagne-bright"></i>
+                        <span>083151902491</span>
+                    </a>
+                    <a href="mailto:raflinugroho88@gmail.com" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-envelope text-sm text-champagne dark:text-champagne-bright"></i>
+                        <span>raflinugroho88@gmail.com</span>
+                    </a>
+                    <a href="#profil" class="hover:text-champagne dark:hover:text-champagne-bright transition-colors flex items-center gap-1.5">
+                        <span>Kembali ke Atas</span>
+                        <i class="fa-solid fa-arrow-up text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gold-hairline my-7"></div>
+
+            <div class="text-center font-mono text-xs text-emeraldDeep-sage dark:text-emeraldDeep-mist">
+                © 2025 Rafli Nugroho. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         ZOOMABLE LIGHTBOX MODAL FOR GALLERY & PROJECT PREVIEWS
+         ===================================================================== -->
+    <div id="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lb-title" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-[#050E0A]/90 backdrop-blur-xl opacity-0 transition-opacity duration-300" onclick="closeLightboxOnBackdrop(event)">
+        <div class="relative max-w-4xl w-full bg-emeraldDeep-surface border border-champagne/40 rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="lightbox-dialog">
+            <!-- Top Close Bar -->
+            <div class="flex items-center justify-between px-6 py-4 border-b border-champagne/20 bg-emeraldDeep">
+                <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-champagne-bright">
+                    Visual Inspection &amp; Showcase
+                </span>
+                <button type="button" onclick="closeLightbox()" aria-label="Tutup Lightbox" class="w-9 h-9 rounded-full bg-white/10 hover:bg-champagne-bright hover:text-emeraldDeep text-alabaster flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Image Viewport -->
+            <div class="relative bg-[#06110D] max-h-[60vh] overflow-hidden flex items-center justify-center">
+                <img id="lb-image" src="" alt="Preview" class="w-full max-h-[60vh] object-cover">
+            </div>
+
+            <!-- Caption & Action Link -->
+            <div class="p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-emeraldDeep-surface">
+                <div class="space-y-1">
+                    <h3 id="lb-title" class="font-display text-2xl font-bold text-[#F2F4F0]">Judul Proyek</h3>
+                    <p id="lb-desc" class="text-xs sm:text-sm text-[#CBD6D1] leading-relaxed">Deskripsi singkat proyek.</p>
+                </div>
+                <a id="lb-link" href="#" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-champagne-bright hover:bg-champagne text-emeraldDeep transition-colors shadow-md">
+                    <span>Buka Tautan</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         JAVASCRIPT ENGINE:
+         - Reliable SVG Architectural Fallback for Images (Zero Broken Images)
+         - Theme Switcher (Obsidian Emerald / Alabaster Luxury)
+         - Scroll Progress & IntersectionObserver Reveal + Counters + Skill Bars
+         - 3D Tilt & Champagne Glare
+         - Lightbox Modal
+         - CV & Gallery Filtering
+         - Interactive Free Guestbook with Endorse Likes & LocalStorage
+         ===================================================================== -->
+    <script>
+        // ---------------------------------------------------------------------
+        // 1. ZERO-BROKEN-IMAGE SVG LUXURY ARTWORK FALLBACK
+        // ---------------------------------------------------------------------
+        function buildLuxurySvgFallback(themeType) {
+            let accent = '#E4C47C';
+            let label = 'ARCHITECTURAL SHOWCASE';
+            if (themeType === 'engineering') {
+                accent = '#6EE7B7';
+                label = 'PRECISION ENGINEERING';
+            } else if (themeType === 'hospitality') {
+                accent = '#DC7F60';
+                label = 'BOUTIQUE DIGITAL SERVICE';
+            }
+            const svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+                    <defs>
+                        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#091913"/>
+                            <stop offset="50%" stop-color="#112B21"/>
+                            <stop offset="100%" stop-color="#06110D"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="900" height="540" fill="url(#bg)"/>
+                    <g stroke="${accent}" stroke-opacity="0.22" fill="none">
+                        <rect x="48" y="48" width="804" height="444" rx="20"/>
+                        <circle cx="450" cy="245" r="115"/>
+                        <circle cx="450" cy="245" r="85" stroke-dasharray="6 6"/>
+                        <line x1="160" y1="245" x2="740" y2="245"/>
+                        <line x1="450" y1="90" x2="450" y2="400"/>
+                    </g>
+                    <text x="450" y="255" text-anchor="middle" fill="${accent}" font-family="Georgia, serif" font-size="38" font-weight="bold" letter-spacing="8">RN</text>
+                    <text x="450" y="425" text-anchor="middle" fill="#F2F4F0" fill-opacity="0.85" font-family="monospace" font-size="14" letter-spacing="5">${label}</text>
+                </svg>
+            `.trim();
+            return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        }
+
+        function handleImgError(imgEl, type) {
+            imgEl.onerror = null;
+            imgEl.src = buildLuxurySvgFallback(type || 'architecture');
+        }
+
+        // ---------------------------------------------------------------------
+        // 2. THEME SWITCHER: OBSIDIAN EMERALD (DARK) & ALABASTER LUXURY (LIGHT)
+        // ---------------------------------------------------------------------
+        function syncThemeUI() {
+            const isDark = document.documentElement.classList.contains('dark');
+            const icon = document.getElementById('theme-icon');
+            const label = document.getElementById('theme-label');
+            if (!icon || !label) return;
+
+            if (isDark) {
+                icon.className = 'fa-solid fa-sun text-xs';
+                label.textContent = 'Obsidian';
+            } else {
+                icon.className = 'fa-solid fa-moon text-xs';
+                label.textContent = 'Alabaster';
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            try {
+                localStorage.setItem('rafli_editorial_theme', isDark ? 'dark' : 'light');
+            } catch (e) {}
+            syncThemeUI();
+            showToast(isDark ? 'Tema Obsidian Emerald (Dark) diaktifkan' : 'Tema Alabaster Luxury (Light) diaktifkan');
+        }
+
+        // ---------------------------------------------------------------------
+        // 3. TOAST NOTIFICATION & SAFE CLIPBOARD COPY
+        // ---------------------------------------------------------------------
+        let toastTimeout = null;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        function copyEmail() {
+            const email = 'raflinugroho88@gmail.com';
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = email;
+                ta.setAttribute('readonly', '');
+                ta.style.position = 'absolute';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast('Alamat email disalin: ' + email);
+            } catch (e) {
+                showToast('Email: ' + email);
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // 4. SCROLL PROGRESS BAR & INTERSECTION OBSERVER ANIMATIONS
+        // ---------------------------------------------------------------------
+        function updateScrollProgress() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+            const bar = document.getElementById('scroll-progress');
+            if (bar) bar.style.width = pct + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+        function animateCounters() {
+            const counters = document.querySelectorAll('.metric-counter');
+            counters.forEach(counter => {
+                if (counter.dataset.animated === 'true') return;
+                counter.dataset.animated = 'true';
+                const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const duration = 1300;
+                const startTime = performance.now();
+
+                function tick(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease-out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.round(eased * target);
+                    counter.textContent = current + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
+                }
+                requestAnimationFrame(tick);
+            });
+        }
+
+        function animateSkillBars() {
+            const bars = document.querySelectorAll('.skill-fill');
+            bars.forEach(bar => {
+                const targetW = bar.getAttribute('data-width') || '0%';
+                bar.style.width = targetW;
+            });
+        }
+
+        function initScrollObservers() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        if (entry.target.id === 'metrics-strip') {
+                            animateCounters();
+                        }
+                        if (entry.target.id === 'cv') {
+                            animateSkillBars();
+                        }
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+            // Also observe skills-panel directly for mobile viewports
+            const skillsPanel = document.getElementById('skills-panel');
+            if (skillsPanel) {
+                const skillObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) animateSkillBars();
+                    });
+                }, { threshold: 0.15 });
+                skillObs.observe(skillsPanel);
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // 5. 3D PERSPECTIVE TILT & CHAMPAGNE SPECULAR GLARE
+        // ---------------------------------------------------------------------
+        function initTiltCards() {
+            const cards = document.querySelectorAll('.tilt-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -4.5;
+                    const rotateY = ((x - centerX) / centerX) * 4.5;
+
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                });
+            });
+        }
+
+        // ---------------------------------------------------------------------
+        // 6. LIGHTBOX MODAL FOR VISUAL SHOWCASE & PROJECT PREVIEWS
+        // ---------------------------------------------------------------------
+        function openLightbox(imgUrl, title, desc, linkUrl, fallbackType) {
+            const modal = document.getElementById('lightbox-modal');
+            const dialog = document.getElementById('lightbox-dialog');
+            const imgEl = document.getElementById('lb-image');
+            const titleEl = document.getElementById('lb-title');
+            const descEl = document.getElementById('lb-desc');
+            const linkEl = document.getElementById('lb-link');
+
+            imgEl.onerror = function () {
+                this.onerror = null;
+                this.src = buildLuxurySvgFallback(fallbackType || 'architecture');
+            };
+            imgEl.src = imgUrl;
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+            linkEl.href = linkUrl || '#';
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0');
+                dialog.classList.remove('scale-95');
+                dialog.classList.add('scale-100');
+            });
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            const dialog = document.getElementById('lightbox-dialog');
+            modal.classList.add('opacity-0');
+            dialog.classList.remove('scale-100');
+            dialog.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 280);
+        }
+
+        function closeLightboxOnBackdrop(event) {
+            if (event.target && event.target.id === 'lightbox-modal') {
+                closeLightbox();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ---------------------------------------------------------------------
+        // 7. INTERACTIVE GALLERY & CV FILTERS
+        // ---------------------------------------------------------------------
+        function setActivePillGroup(selector, activeBtn) {
+            document.querySelectorAll(selector).forEach(btn => {
+                btn.classList.remove(
+                    'active', 'bg-emeraldDeep', 'text-alabaster', 'dark:bg-champagne-bright', 'dark:text-emeraldDeep', 'shadow-sm', 'font-bold'
+                );
+                btn.classList.add(
+                    'bg-alabaster-card', 'dark:bg-emeraldDeep-surface', 'text-emeraldDeep-sage', 'dark:text-emeraldDeep-mist',
+                    'border', 'border-champagne/30', 'font-semibold'
+                );
+            });
+            activeBtn.classList.remove(
+                'bg-alabaster-card', 'dark:bg-emeraldDeep-surface', 'text-emeraldDeep-sage', 'dark:text-emeraldDeep-mist',
+                'border', 'border-champagne/30', 'font-semibold'
+            );
+            activeBtn.classList.add(
+                'active', 'bg-emeraldDeep', 'text-alabaster', 'dark:bg-champagne-bright', 'dark:text-emeraldDeep', 'shadow-sm', 'font-bold'
+            );
+        }
+
+        function filterGallery(category, btn) {
+            setActivePillGroup('.gal-filter-btn', btn);
+            document.querySelectorAll('.gal-item').forEach(item => {
+                const cat = item.getAttribute('data-gal-cat');
+                if (category === 'all' || cat === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        function filterCV(category, btn) {
+            setActivePillGroup('.cv-filter-btn', btn);
+            let visibleCount = 0;
+            document.querySelectorAll('.cv-card').forEach(card => {
+                const cat = card.getAttribute('data-cv-cat');
+                if (category === 'all' || cat === category) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            const counterEl = document.getElementById('cv-counter');
+            if (counterEl) counterEl.textContent = `${visibleCount} Entri`;
+        }
+
+        // ---------------------------------------------------------------------
+        // 8. RUANG KOMENTAR BEBAS (LOCALSTORAGE + ENDORSE LIKES + DELETE)
+        // ---------------------------------------------------------------------
+        const GUESTBOOK_STORAGE_KEY = 'rafli_luxury_guestbook_v2';
+        const LIKES_STORAGE_KEY = 'rafli_luxury_guestbook_likes_v2';
+
+        const INITIAL_COMMENTS = [
+            {
+                id: 'seed-1',
+                name: 'Rafli Nugroho',
+                role: 'Developer & Specialist',
+                topic: 'Catatan Pengembang',
+                message: 'Selamat datang di portofolio digital saya. Setiap proyek web dan tugas operasional lapangan saya kerjakan dengan ketelitian tinggi agar memberikan hasil optimal serta kepercayaan jangka panjang bagi setiap klien.',
+                date: 'Pinned • Official Note',
+                likes: 18,
+                isUserAdded: false
+            },
+            {
+                id: 'seed-2',
+                name: 'Klien Proyek Konstruksi',
+                role: 'Pemilik Usaha Kontraktor',
+                topic: 'Testimoni Klien',
+                message: 'Platform Pembangunan Rumah Kontraktor tampil sangat berkelas dan meyakinkan calon pemilik hunian. Struktur informasinya rapi dan profesional.',
+                date: 'Klien Terverifikasi',
+                likes: 14,
+                isUserAdded: false
+            },
+            {
+                id: 'seed-3',
+                name: 'Tim Manajemen Herodian Teknik',
+                role: 'Mitra Rekayasa Teknik',
+                topic: 'Testimoni Klien',
+                message: 'Website Herodian Teknik sangat membantu meningkatkan kredibilitas layanan teknis kami. Navigasi cepat dan komunikasinya sangat responsif.',
+                date: 'Klien Terverifikasi',
+                likes: 12,
+                isUserAdded: false
+            },
+            {
+                id: 'seed-4',
+                name: 'Mamah Ines',
+                role: 'Owner Mamah Ines Laundry',
+                topic: 'Testimoni Klien',
+                message: 'Fitur kalkulator harga otomatis dan integrasi lokasi antar-jemputnya memudahkan pelanggan kami memesan lewat HP. Sangat memuaskan!',
+                date: 'Klien Terverifikasi',
+                likes: 15,
+                isUserAdded: false
+            }
+        ];
+
+        function loadUserComments() {
+            try {
+                const raw = localStorage.getItem(GUESTBOOK_STORAGE_KEY);
+                const parsed = raw ? JSON.parse(raw) : [];
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveUserComments(items) {
+            try {
+                localStorage.setItem(GUESTBOOK_STORAGE_KEY, JSON.stringify(items));
+            } catch (e) {}
+        }
+
+        function loadLikedMap() {
+            try {
+                const raw = localStorage.getItem(LIKES_STORAGE_KEY);
+                return raw ? JSON.parse(raw) : {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function saveLikedMap(map) {
+            try {
+                localStorage.setItem(LIKES_STORAGE_KEY, JSON.stringify(map));
+            } catch (e) {}
+        }
+
+        function escapeHTML(str) {
+            return String(str).replace(/[&<>"']/g, ch => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            }[ch]));
+        }
+
+        function toggleLikeComment(id) {
+            const likedMap = loadLikedMap();
+            likedMap[id] = !likedMap[id];
+            saveLikedMap(likedMap);
+            renderGuestbook();
+        }
+
+        function renderGuestbook() {
+            const feedEl = document.getElementById('guestbook-feed');
+            const badgeEl = document.getElementById('total-comments-badge');
+            const userComments = loadUserComments();
+            const likedMap = loadLikedMap();
+            const allItems = [...userComments, ...INITIAL_COMMENTS];
+
+            if (badgeEl) badgeEl.textContent = `${allItems.length} Komentar`;
+
+            feedEl.innerHTML = allItems.map(item => {
+                const initial = escapeHTML(item.name.trim().charAt(0).toUpperCase() || 'R');
+                const isLiked = !!likedMap[item.id];
+                const likeCount = (item.likes || 0) + (isLiked ? 1 : 0);
+
+                return `
+                    <div class="bg-alabaster-card dark:bg-emeraldDeep-surface/95 border ${item.isUserAdded ? 'border-champagne/50 dark:border-champagne-bright/45' : 'border-champagne/25 dark:border-champagne-bright/20'} rounded-2xl p-5 sm:p-6 shadow-sm space-y-3 transition-all">
+                        <div class="flex items-start justify-between gap-3">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-full border border-champagne/50 bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep dark:text-champagne-bright font-display font-bold text-base flex items-center justify-center shrink-0">
+                                    ${initial}
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <h4 class="font-bold text-sm text-emeraldDeep dark:text-[#F2F4F0]">${escapeHTML(item.name)}</h4>
+                                        ${item.role ? `<span class="text-[11px] font-medium text-emeraldDeep-sage dark:text-emeraldDeep-mist">&bull; ${escapeHTML(item.role)}</span>` : ''}
+                                        <span class="font-mono px-2.5 py-0.5 rounded-full text-[9px] font-semibold uppercase tracking-wider bg-champagne-soft/80 dark:bg-champagne-bright/15 text-champagne dark:text-champagne-bright border border-champagne/30">
+                                            ${escapeHTML(item.topic || 'Komentar Umum')}
+                                        </span>
+                                    </div>
+                                    <span class="font-mono text-[10px] text-emeraldDeep-sage dark:text-emeraldDeep-mist block mt-0.5">
+                                        ${escapeHTML(item.date)}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="toggleLikeComment('${escapeHTML(item.id)}')" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border transition-colors ${isLiked ? 'bg-champagne-bright text-emeraldDeep border-champagne-bright' : 'bg-emeraldDeep/5 dark:bg-emeraldDeep text-emeraldDeep-sage dark:text-champagne-bright border-champagne/25 hover:border-champagne'}" title="Apresiasi komentar ini">
+                                    <i class="${isLiked ? 'fa-solid' : 'fa-regular'} fa-heart text-[11px]"></i>
+                                    <span class="font-mono text-[11px]">${likeCount}</span>
+                                </button>
+
+                                ${item.isUserAdded ? `
+                                    <button type="button" onclick="deleteUserComment('${escapeHTML(item.id)}')" class="text-xs text-terracotta dark:text-terracotta-bright hover:bg-terracotta/15 p-1.5 rounded-lg transition-colors" title="Hapus komentar Anda">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                ` : ''}
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-emeraldDeep/85 dark:text-[#DCE5E1] leading-relaxed">
+                            ${escapeHTML(item.message)}
+                        </p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function submitGuestbookComment(event) {
+            event.preventDefault();
+            const nameEl = document.getElementById('gb-name');
+            const roleEl = document.getElementById('gb-role');
+            const topicEl = document.getElementById('gb-topic');
+            const msgEl = document.getElementById('gb-message');
+
+            const nameVal = nameEl.value.trim();
+            const roleVal = roleEl.value.trim();
+            const topicVal = topicEl.value;
+            const msgVal = msgEl.value.trim();
+
+            if (!nameVal || !msgVal) return;
+
+            const dateStr = new Date().toLocaleDateString('id-ID', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+
+            const newComment = {
+                id: 'usr-' + Date.now(),
+                name: nameVal,
+                role: roleVal,
+                topic: topicVal,
+                message: msgVal,
+                date: dateStr,
+                likes: 1,
+                isUserAdded: true
+            };
+
+            const list = loadUserComments();
+            list.unshift(newComment);
+            saveUserComments(list);
+
+            nameEl.value = '';
+            roleEl.value = '';
+            msgEl.value = '';
+            renderGuestbook();
+            showToast('Terima kasih! Komentar Anda telah dipublikasikan.');
+        }
+
+        function deleteUserComment(id) {
+            const updated = loadUserComments().filter(item => item.id !== id);
+            saveUserComments(updated);
+            renderGuestbook();
+            showToast('Komentar berhasil dihapus.');
+        }
+
+        // ---------------------------------------------------------------------
+        // INITIALIZE ON LOAD
+        // ---------------------------------------------------------------------
+        document.addEventListener('DOMContentLoaded', () => {
+            syncThemeUI();
+            updateScrollProgress();
+            initScrollObservers();
+            initTiltCards();
+            renderGuestbook();
+        });
+    </script>
+</body>
+</html>
